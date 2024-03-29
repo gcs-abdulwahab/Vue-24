@@ -1,7 +1,10 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 import { computed } from 'vue';
-const count = ref(0);
+const count = reactive({
+    value: 0
+});
+
 const step = ref(1);
 
 
@@ -24,9 +27,9 @@ const stepSquared = computed(() => step.value * step.value);
 </script>
 <template>
 
-    <h1>Convertor :{{ count }}</h1>
+    <h1>Convertor :{{ count.value }}</h1>
     
-    <input type="text" v-model="count">
+    <input type="text" v-model="count.value">
     <br>
     Step: <input type="text" v-model="step" />
     <button @click="increment">Increment</button>

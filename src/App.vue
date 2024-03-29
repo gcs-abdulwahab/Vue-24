@@ -1,11 +1,11 @@
 <script setup>
-import Convertor from './components/Convertor.vue';
-import Login from './components/Login.vue';
+import CompList from "./components/CompList.vue";
+
 </script>
 
 <template>
   <div class="">
-    <Convertor />
+    <comp-list />
   </div>
 </template>
 
